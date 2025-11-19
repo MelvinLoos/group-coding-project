@@ -19,7 +19,7 @@ We werken met een **automatische politieagent** (CI/CD Pipeline). Als je je niet
     * Blijf in je eigen vakje.
 3.  **🚫 GEEN Externe Plaatjes of Javascript.**
     * Geen `<img src="...">` en geen `background-image: url(...)`.
-    * **Challenge:** Alles wat je ziet moet je zelf tekenen met CSS (shapes, gradients, borders)!
+    * **Challenge:** Alles wat je ziet moet je zelf tekenen met CSS (shapes, gradients, borders) of inline SVG!
 4.  **🔒 Blijf van de Systeembestanden af.**
     * Raak `index.html`, `style.css`, `script.js` en de `.github` map NIET aan. De "Watchdog" ziet alles! 👀
 5.  **✍️ Werk ALLEEN in je eigen bestand.**
@@ -29,13 +29,22 @@ We werken met een **automatische politieagent** (CI/CD Pipeline). Als je je niet
 
 ## 🛠️ De Workflow
 
-Volg deze stappen precies, anders ontstaan er conflicten (en huilende docenten).
+Volg deze stappen precies. We werken als "Open Source" developers via Forks!
 
-### Stap 1: Setup
-1.  **Clone** deze repository naar je laptop.
-2.  Maak direct een **nieuwe branch** aan.
-    * Naamgeving: `feature/jouw-naam` (bijv. `feature/piet-puk`).
-    * *Werk nooit direct op de `main` branch!*
+### Stap 1: Setup (Fork & Clone) 🍴
+Omdat we werken als echte pro's, werk je niet direct in de repository van de docent. Je maakt eerst een kopie voor jezelf.
+
+1.  **Fork de Repository:**
+    * Kijk rechtsboven op deze pagina op GitHub.
+    * Klik op de knop **Fork**.
+    * Bevestig dat je hem naar jouw eigen account kopieert.
+2.  **Clone JOUW Fork:**
+    * Nu ben je op de pagina van *jouw* versie (je ziet je eigen naam linksboven staan).
+    * Klik op de groene knop **Code** en kopieer de link.
+    * Ga naar VS Code en clone deze link naar je laptop.
+3.  **Maak een Branch:**
+    * Maak direct een nieuwe branch aan: `git checkout -b feature/jouw-naam` (bijv. `feature/piet-puk`).
+    * *Werk nooit op de main branch!*
 
 ### Stap 2: Maak je bestand
 1.  Ga naar de map `tiles/`.
@@ -64,10 +73,11 @@ De website weet nog niet dat jouw bestand bestaat. Draai het hulpscript om dit l
 1.  Zorg dat je vakje een **achtergrondkleur** heeft en dat **jouw naam** erin staat.
 2.  Sla je bestand op.
 3.  **Commit** je wijzigingen (bericht: *"Mijn tegel geclaimd"*).
-4.  **Push** je branch naar GitHub.
-5.  Ga naar GitHub.com en maak een **Pull Request (PR)** aan naar de `main` branch.
-6.  **WACHT.**
-    * Kijk naar de checks. Worden ze groen? ✅ → Top! De docent zal je mergen.
+4.  **Push** je branch naar GitHub (naar jouw Fork).
+5.  Ga naar GitHub.com (jouw Fork pagina). Je ziet nu een gele balk: *"Compare & pull request"*.
+6.  Klik hierop om je werk in te sturen naar de docent.
+7.  **WACHT.**
+    * Kijk naar de checks in jouw Pull Request. Worden ze groen? ✅ → Top! De docent zal je mergen.
     * Worden ze rood? ❌ → Je hebt een regel overtreden. Fix het in je code, push opnieuw, en de check gaat weer lopen.
 
 ---
@@ -87,10 +97,29 @@ Let op: Op het grote grid is je tegel vrij klein.
 * **De Uitdaging:** Zorg dat je ontwerp er van veraf duidelijk uitziet (grote vormen/kleuren), maar verstop **kleine details** die we pas zien als we inzoomen.
 * *Voorbeeld:* Een huisje is leuk van veraf. Maar als we inzoomen, zien we pas de kat in de vensterbank.
 
-**Klaar?**
-1.  Commit & Push opnieuw.
-2.  Check je Pull Request (deze wordt automatisch geüpdatet).
-3.  Wacht tot de docent je update merged op het grote scherm.
+---
+
+## 🛠️ Gereedschapskist & Inspiratie
+
+Omdat je geen plaatjes (`.jpg`/`.png`) mag gebruiken, moet je slim zijn met CSS.
+Gebruik deze tools om vette dingen te maken:
+
+### 🌈 Patronen & Achtergronden
+* **[CSS3 Patterns Gallery](https://projects.verou.me/css3patterns/)** - *Kopieer de CSS voor ruitjes, stippen en zig-zags.*
+* **[CSS Gradient](https://cssgradient.io/)** - *Maak complexe kleurverlopen.*
+* **[Haikei](https://app.haikei.app/)** - *Genereer golven en blobs.*
+    * *Let op:* Kies 'SVG' en plak de `<svg>...</svg>` code **direct** in jouw HTML file (geen `<img>` tag gebruiken!).
+
+### ✂️ Vormen (Shapes)
+* **[Clippy (CSS Clip-Path)](https://bennettfeely.com/clippy/)** - *Maak sterren, pijlen en gekke vormen van je div.*
+* **[The Shapes of CSS](https://css-tricks.com/the-shapes-of-css/)** - *Hoe maak je een hartje of pac-man met code?*
+
+### 🎬 Animatie
+* **[Animista](https://animista.net/)** - *Test animaties en kopieer de `@keyframes`.*
+* **[Cubic-Bezier](https://cubic-bezier.com/)** - *Maak je bewegingen soepel en professioneel.*
+
+### 🤯 Extreme Inspiratie (Pro Level)
+* **[A Single Div](https://a.singlediv.com/)** - *Kijk wat mogelijk is met maar 1 div (ter inspiratie).*
 
 ---
 
