@@ -1,0 +1,33 @@
+<style>
+    /* Zorg dat al je CSS selectors beginnen met je eigen ID om ruzie te voorkomen! 
+       Voorbeeld: #tile-1234 .mijn-kleur { ... } */
+    
+    #tile-1234 {
+        width: 100%;
+        height: 100%;
+        background-color: #0068dffe;
+        color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+        font-weight: bold;
+        border: 2px solid #eee;
+        box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+        transition: all 0.3s ease;
+        text-align: center;;
+    }
+
+    #tile-1234:hover {
+        background-color: #000000;
+        color: #fff;
+        transform: scale(0.95);
+        border-radius: 10px;
+    }
+</style>
+
+<div id="tile-1234" class="student-tile">
+    <h2>Melvin Loos</h2>
+</div>
